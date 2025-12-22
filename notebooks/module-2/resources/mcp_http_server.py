@@ -58,5 +58,6 @@ def prompt():
     """
 
 
-if __name__ == "__main__":
-    mcp.run(transport="stdio")
+# NOTE: uv run uvicorn resources.mcp_http_server:app --host 127.0.0.1 --port 8000
+# command will allow the server to spinup and connect
+app = mcp.streamable_http_app()
